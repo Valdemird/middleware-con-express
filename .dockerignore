@@ -1,0 +1,8 @@
+.git
+.results
+scripts
+*Dockerfile*
+npm-debug.log
+node_modules
+.env
+build
