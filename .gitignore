@@ -11,6 +11,7 @@ pids
 *.pid.lock
 build/Release
 node_modules/
+build
 jspm_packages/
 typings/
 *.tsbuildinfo
