@@ -9,7 +9,7 @@ const info: WriteFunc = (text: string): void => {
     winstonLogger.info(text);
 };
 const error: WriteFunc = (text: string): void => {
-    winstonLogger.info(text);
+    winstonLogger.error(text);
 };
 
 export const logger: Logger = {

@@ -10,8 +10,11 @@ export const authMiddleware = () => async (req: AppRequest, res: Response, next:
             const payload = await validate(token);
             req.auth = payload;
             next();
+        } else {
+            throw new Error('Empty Authorization header');
         }
     } catch (error) {
+        res.status(401);
         next(error);
     }
 };
