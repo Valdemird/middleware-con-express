@@ -2,6 +2,8 @@ version: '3.1'
 
 services:
   express:
+    environment: 
+      - JWT_KEY=123456
     ports:
       - 3000:3000
     build:

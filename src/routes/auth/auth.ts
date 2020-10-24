@@ -1,5 +1,6 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import { authController } from '../../controllers';
 
 export const authRoute = Router();
 
-authRoute.get('/');
+authRoute.get('/', authController.authenticate);

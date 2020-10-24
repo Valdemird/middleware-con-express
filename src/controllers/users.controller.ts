@@ -1,12 +1,14 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 import Joi from 'joi';
+import { AppRequest } from '../interfaces';
 import { ValidationType, validateMiddleware } from '../middlewares/validator';
 
 const getUsersSchema = Joi.object({
     id: Joi.string().alphanum().min(1).max(10).required(),
 });
 
-const getUsersController = (req: Request, res: Response): void => {
+const getUsersController = (req: AppRequest, res: Response): void => {
+    console.log('request', req.auth);
     res.json({
         data: '10',
     });
